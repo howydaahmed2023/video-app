@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'bootstrap/dist/css/bootstrap.min.css';
+body {
+  background-color: black;
+}
+
+.card:hover{
+  transform: scale(1.2);
+  transition: all ease-in-out 1s;
+}

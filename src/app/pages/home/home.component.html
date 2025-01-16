@@ -1,0 +1,9 @@
+<app-video-post  [videos]="videos" ></app-video-post>
+
+<div class="container">
+  <div class="row">
+   <app-load-more [videos]="videos" (videoEvent)="receiveVideos($event)" ></app-load-more>
+  </div>
+</div>
+
+

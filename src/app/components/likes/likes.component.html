@@ -1,0 +1,16 @@
+
+
+    <div class=" d-flex flex-row justify-content-end align-content-center text-light mt-2">
+      <i class="fa-regular fa-thumbs-down  fa-2x " (click)="decreaseLikes()" [class.inactive]="!isLiked"></i>
+      <span class="fw-bold fs-3 mx-3 ">{{videoData.likes}}</span>
+      <i class="fa-regular fa-thumbs-up  fa-2x" (click)="increaseLikes()" [class.active]="isLiked"></i>
+
+
+
+    </div>
+
+
+
+
+
+

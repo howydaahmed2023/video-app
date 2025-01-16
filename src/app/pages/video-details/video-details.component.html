@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-4 mt-3 animate__animated animate__fadeInLeft">
+      <img
+        [src]="videoData.thumbnail"
+        [alt]="videoData.title"
+        class="img-thumbnail"
+
+      />
+    </div>
+    <div class="col-8 animate__animated animate__fadeInRight">
+      <h3 class="text-warning mt-3">{{ videoData.title }}</h3>
+
+      <p class="text-white mt-3">{{ videoData.description }}</p>
+      <p class="text-info">
+        published at :
+        <span class="text-white">{{ videoData.published_at | date }}</span>
+      </p>
+      <p class="text-info">
+        video duration :
+         <span class="text-white">{{videoData.duration | number :"2.1-2"}}
+
+
+         </span>
+       </p>
+      <p class="text-info">
+        downloads last month :
+        <span class="text-white">{{ videoData.downloads_last_month }}</span>
+      </p>
+
+
+    </div>
+  </div>
+</div>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-12 text-center animate__animated animate__fadeInUp">
+      <video  controls class="bg-dark p-4 w-100 h-75" loading="lazy">
+        <source src="{{videoData.urls.mp4}}" type="video/mp4">
+
+      Your browser does not support the video tag.
+      </video>
+      <app-likes [videoData]="videoData"></app-likes>
+    </div>
+  </div>
+</div>
+<div class="container mt-0">
+  <div class="row">
+
+
+  </div>
+</div>
