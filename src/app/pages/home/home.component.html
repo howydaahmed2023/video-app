@@ -1,9 +1,17 @@
-<app-video-post  [videos]="videos" ></app-video-post>
 
+<div class="container">
+  <div class="row mt-3 animate__animated animate__fadeInRight">
+   <app-load-more [videos]="videos" (videoEvent)="receiveVideos($event)" ></app-load-more>
+  </div>
+</div>
+
+<app-video-post  [videos]="videos" ></app-video-post>
 <div class="container">
   <div class="row">
    <app-load-more [videos]="videos" (videoEvent)="receiveVideos($event)" ></app-load-more>
   </div>
 </div>
+
+
 
 
